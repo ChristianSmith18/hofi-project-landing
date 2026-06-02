@@ -1,0 +1,57 @@
+<nav class="nav" id="nav" [class.menu-open]="isMenuOpen()">
+  <div class="wrap row">
+    <a routerLink="/" fragment="top" class="brand" aria-label="Hofi inicio" (click)="closeMenu()">
+      <img
+        ngSrc="hofi-logo.svg"
+        width="610"
+        height="272"
+        class="logo"
+        alt="Hofi"
+        style="height: 27px; width: auto"
+      />
+    </a>
+
+    <div class="nav-links" [class.open]="isMenuOpen()">
+      <a routerLink="/" fragment="como-funciona" (click)="closeMenu()">Cómo funciona</a>
+      <a routerLink="/" fragment="caracteristicas" (click)="closeMenu()">Características</a>
+      <a routerLink="/privacy" (click)="closeMenu()">Privacidad</a>
+      <a routerLink="/terms" (click)="closeMenu()">Términos y Condiciones</a>
+      <a
+        routerLink="/"
+        fragment="descargar"
+        class="btn btn-primary btn-sm mobile-cta"
+        (click)="closeMenu()"
+        >Descargar app</a
+      >
+    </div>
+
+    <div class="right-actions">
+      <div class="cta desktop-cta">
+        <a routerLink="/" fragment="descargar" class="btn btn-primary btn-sm">Descargar app</a>
+      </div>
+      <button
+        class="hamburger"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="isMenuOpen()"
+        aria-label="Menú"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          @if (isMenuOpen()) {
+            <path d="M18 6L6 18M6 6l12 12" />
+          } @else {
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          }
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>

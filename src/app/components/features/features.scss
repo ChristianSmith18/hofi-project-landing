@@ -1,0 +1,338 @@
+:host {
+  display: block;
+}
+
+.section {
+  padding: 96px 0;
+}
+.sec-head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 56px;
+}
+.sec-head h2 {
+  font-size: clamp(30px, 3.6vw, 44px);
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  margin: 18px 0 0;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+.sec-head p {
+  color: var(--text-dim);
+  font-size: 17px;
+  margin: 16px 0 0;
+  line-height: 1.55;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.fcard {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 24px;
+  padding: 30px 26px 32px;
+  transition:
+    transform 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease;
+  position: relative;
+  overflow: hidden;
+}
+.fcard:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in oklch, var(--accent) 30%, var(--border));
+  background: var(--card-hi);
+}
+.fcard .fic {
+  width: 56px;
+  height: 56px;
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in oklch, var(--accent) 24%, transparent);
+  margin-bottom: 22px;
+}
+.fcard h3 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin: 0 0 10px;
+}
+.fcard p {
+  color: var(--text-dim);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+.fcard .num {
+  position: absolute;
+  top: 22px;
+  right: 26px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-mute);
+}
+
+/* ── bento ─────────────────────────── */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.fcard.span2 {
+  grid-column: span 2;
+}
+.fcard.feat {
+  background: linear-gradient(150deg, oklch(0.3 0.07 152) 0%, var(--card-hi) 68%);
+  border-color: color-mix(in oklch, var(--accent) 26%, var(--border));
+  display: flex;
+  flex-direction: column;
+  padding: 34px 32px;
+}
+.fcard.feat .fic {
+  background: var(--accent);
+  border-color: transparent;
+}
+.fcard.feat h3 {
+  font-size: 27px;
+  letter-spacing: -0.7px;
+}
+.fcard.feat p {
+  font-size: 16px;
+  color: var(--text-dim);
+  max-width: 440px;
+}
+.feat-badge {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+  color: var(--accent-ink);
+  background: var(--accent);
+  padding: 6px 11px;
+  border-radius: 99px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* AI mini visual: receipt -> auto items */
+.ai-vis {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 26px;
+}
+.receipt {
+  width: 116px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 13px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.receipt .rl {
+  height: 7px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.14);
+  margin-bottom: 8px;
+}
+.receipt .scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 14px 2px var(--accent);
+  top: 40%;
+}
+.ai-arrow {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.ai-items {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  flex: 1;
+  min-width: 0;
+}
+.ai-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 12px;
+  padding: 10px 13px;
+}
+.ai-item .ck {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.ai-item .nm {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ai-item .am {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+/* ── modes / split card ────────────── */
+.modes-card {
+  margin-top: 18px;
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 24px;
+  padding: 34px;
+}
+.modes-head {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+.modes-head .fic {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  flex-shrink: 0;
+  margin: 0;
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in oklch, var(--accent) 24%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modes-head h3 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin: 2px 0 8px;
+}
+.modes-head p {
+  color: var(--text-dim);
+  font-size: 15.5px;
+  margin: 0;
+  max-width: 640px;
+  line-height: 1.6;
+}
+.split-modes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 28px;
+}
+.sm {
+  background: var(--bg-alt);
+  border: 1px solid var(--hairline);
+  border-radius: 16px;
+  padding: 18px 18px 20px;
+}
+.sm .smic {
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: var(--card-hi);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.sm b {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 5px;
+}
+.sm span {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+/* ── more strip ────────────────────── */
+.more-strip {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+.more-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  flex-shrink: 0;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  white-space: nowrap;
+  padding: 11px 16px;
+  border-radius: 14px;
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  transition:
+    border-color 0.16s ease,
+    transform 0.16s ease;
+}
+.chip svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+.chip:hover {
+  border-color: color-mix(in oklch, var(--accent) 32%, var(--border));
+  transform: translateY(-2px);
+}
+
+@media (max-width: 880px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+  .bento {
+    grid-template-columns: 1fr;
+  }
+  .fcard.span2 {
+    grid-column: auto;
+  }
+  .split-modes {
+    grid-template-columns: 1fr;
+  }
+}

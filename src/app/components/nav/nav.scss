@@ -1,0 +1,132 @@
+:host {
+  display: block;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    backdrop-filter 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+:host(.scrolled) .nav,
+.nav.menu-open {
+  background: rgba(9, 12, 11, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--hairline);
+}
+.nav .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 74px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.nav-links a {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dim);
+  transition: color 0.16s ease;
+}
+.nav-links a:hover {
+  color: var(--text);
+}
+.right-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.desktop-cta {
+  display: flex;
+}
+.mobile-cta {
+  display: none;
+}
+.nav .btn-sm {
+  height: 44px;
+  padding: 0 18px;
+  font-size: 14px;
+  border-radius: 13px;
+}
+
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: 8px;
+  margin-right: -8px;
+}
+
+@media (max-width: 860px) {
+  .hamburger {
+    display: block;
+  }
+  .desktop-cta {
+    display: none;
+  }
+
+  .nav .brand {
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+    transform: translateY(-10px);
+  }
+
+  :host(.scrolled) .nav .brand,
+  .nav.menu-open .brand {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(9, 12, 11, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--hairline);
+    flex-direction: column;
+    gap: 24px;
+    padding: 32px 24px 40px;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+  .mobile-cta {
+    display: flex;
+    margin-top: 8px;
+    width: 100%;
+    height: 50px !important;
+    color: var(--accent-ink) !important;
+  }
+}

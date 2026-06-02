@@ -3924,7 +3924,7 @@ __metadata:
     "@angular/platform-browser": "npm:^21.2.0"
     "@angular/router": "npm:^21.2.0"
     jsdom: "npm:^28.0.0"
-    prettier: "npm:^3.8.1"
+    prettier: "npm:^3.8.3"
     rxjs: "npm:~7.8.0"
     tslib: "npm:^2.3.0"
     typescript: "npm:~5.9.2"
@@ -5099,7 +5099,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.8.1":
+"prettier@npm:^3.8.3":
   version: 3.8.3
   resolution: "prettier@npm:3.8.3"
   bin:

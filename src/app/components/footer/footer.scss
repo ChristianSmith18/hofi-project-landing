@@ -1,0 +1,89 @@
+:host {
+  display: block;
+}
+
+footer {
+  border-top: 1px solid var(--hairline);
+  background: var(--bg-alt);
+  padding: 64px 0 40px;
+}
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 48px;
+}
+.foot-brand p {
+  color: var(--text-dim);
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin: 18px 0 0;
+  max-width: 300px;
+}
+.foot-col h4 {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-mute);
+  margin: 0 0 18px;
+  font-weight: 600;
+}
+.foot-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.foot-col a {
+  color: var(--text-dim);
+  font-size: 14.5px;
+  transition: color 0.16s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+.foot-col a:hover {
+  color: var(--accent);
+}
+.foot-col a .ext {
+  opacity: 0.5;
+}
+.foot-bot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 56px;
+  padding-top: 26px;
+  border-top: 1px solid var(--hairline);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.foot-bot .cp {
+  font-size: 13px;
+  color: var(--text-mute);
+}
+.foot-bot .mail {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-dim);
+}
+.foot-bot .mail a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 860px) {
+  .foot-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .foot-brand {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 520px) {
+  .foot-grid {
+    grid-template-columns: 1fr;
+  }
+}

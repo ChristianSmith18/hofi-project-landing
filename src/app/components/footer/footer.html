@@ -1,0 +1,45 @@
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand">
+          <img
+            ngSrc="hofi-logo.svg"
+            width="610"
+            height="272"
+            class="logo"
+            alt="Hofi"
+            style="height: 30px; width: auto"
+          />
+        </a>
+        <p>
+          La app para dividir los gastos del hogar de forma justa y transparente. Hecha en Chile.
+        </p>
+      </div>
+      <div class="foot-col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="#caracteristicas">Características</a></li>
+          <li><a href="#descargar">Descargar app</a></li>
+          <li><a href="mailto:soporte@tu-dominio.com">Soporte</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a routerLink="/privacy">Política de Privacidad</a></li>
+          <li><a routerLink="/terms">Términos y Condiciones</a></li>
+          <li><a href="#">Solicitar Eliminación de Cuenta</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span class="cp"
+        >© 2026 {{ env.appName }} · {{ env.developerName }}. Todos los derechos reservados.</span
+      >
+      <span class="mail"
+        >Soporte: <a href="mailto:soporte@{{ env.domain }}">soporte@{{ env.domain }}</a></span
+      >
+    </div>
+  </div>
+</footer>
