@@ -1,0 +1,123 @@
+<nav class="legal-nav">
+  <div class="wrap row">
+    <a routerLink="/" class="brand" aria-label="{{ env.appName }} inicio">
+      <img class="logo" src="hofi-logo.svg" alt="{{ env.appName }}" />
+    </a>
+    <a routerLink="/" class="back-link">
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.9"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M14 6l-6 6 6 6" />
+      </svg>
+      Volver al inicio
+    </a>
+  </div>
+</nav>
+
+<header class="legal-hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>Documento legal</span>
+    <h1>Eliminación de Cuenta y Datos</h1>
+    <p class="upd">Última actualización: Junio de 2026</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="doc">
+    <p class="lead">
+      Instrucciones para la Eliminación de Cuenta y Datos en <strong>{{ env.appName }}</strong
+      >.
+    </p>
+    <p>
+      En cumplimiento con las políticas de privacidad y los requisitos de las tiendas de
+      aplicaciones (como Google Play Store), declaramos que tienes el
+      <strong>derecho absoluto</strong> de solicitar la eliminación permanente de tu cuenta y todos
+      tus datos personales asociados a la aplicación {{ env.appName }} (desarrollada por
+      {{ env.developerName }}).
+    </p>
+
+    <h2><span class="ix">01</span>Método 1: Solicitud desde la Aplicación</h2>
+    <p>
+      Si tienes la aplicación instalada y tienes acceso a tu cuenta, puedes iniciar el proceso de
+      eliminación directamente desde tus ajustes:
+    </p>
+    <ol>
+      <li>Abre la aplicación {{ env.appName }}.</li>
+      <li>Ve a la sección <strong>Ajustes</strong>.</li>
+      <li>
+        Desplázate hasta la sección <strong>"Soporte"</strong> (o Perfil) y selecciona la opción
+        <strong>"Eliminar cuenta"</strong>.
+      </li>
+      <li>Confirma la advertencia de seguridad en pantalla.</li>
+      <li>
+        Se abrirá automáticamente tu aplicación de correo con una solicitud pre-llenada. Solo debes
+        enviarla sin modificar el asunto.
+      </li>
+    </ol>
+    <p>
+      Una vez enviado el correo, procesaremos la eliminación definitiva de tu cuenta y datos en un
+      plazo máximo de 15 días hábiles.
+    </p>
+
+    <h2><span class="ix">02</span>Método 2: Desde la Web (Por Correo)</h2>
+    <p>
+      Si ya has desinstalado la aplicación o no tienes acceso a ella, puedes solicitar la
+      eliminación manual de tus datos:
+    </p>
+    <ul>
+      <li>
+        Envía un correo electrónico a
+        <strong
+          ><a href="mailto:soporte@{{ env.domain }}">soporte@{{ env.domain }}</a></strong
+        >.
+      </li>
+      <li>
+        Asegúrate de enviarlo <strong>desde el mismo correo electrónico</strong> que tienes
+        registrado en tu cuenta de {{ env.appName }}.
+      </li>
+      <li>El asunto del correo debe ser: <em>"Solicitud de Eliminación de Cuenta"</em>.</li>
+    </ul>
+    <p>
+      Una vez recibido el correo, verificaremos tu identidad y procesaremos tu solicitud. Este
+      proceso tomará un <strong>máximo de 15 días hábiles</strong>.
+    </p>
+
+    <h2><span class="ix">03</span>¿Qué datos se eliminan?</h2>
+    <p>
+      Al completar exitosamente el proceso de eliminación (ya sea por el Método 1 o el Método 2), se
+      eliminarán explícita y permanentemente de nuestros servidores los siguientes datos:
+    </p>
+    <ul>
+      <li>Tu dirección de correo electrónico.</li>
+      <li>Tu nombre de usuario.</li>
+      <li>Todos los identificadores técnicos asociados a tu dispositivo.</li>
+      <li>Todo tu historial personal de gastos y los saldos compartidos que hayas registrado.</li>
+    </ul>
+
+    <h2><span class="ix">04</span>Retención de datos e Irreversibilidad</h2>
+    <p>
+      Declaramos explícitamente que <strong>no se retiene ningún dato personal</strong> una vez
+      confirmada y ejecutada la eliminación. Este proceso elimina por completo tu rastro en nuestra
+      base de datos y es <strong>totalmente irreversible</strong>. Si decides volver a utilizar
+      {{ env.appName }} en el futuro, deberás registrarte como un usuario completamente nuevo.
+    </p>
+  </article>
+</main>
+
+<footer class="legal-foot">
+  <div class="wrap row">
+    <span class="cp">© 2026 {{ env.appName }} · {{ env.developerName }}.</span>
+    <div class="ll">
+      <a routerLink="/privacy">Privacidad</a>
+      <a routerLink="/terms">Términos</a>
+      <a routerLink="/delete-account">Eliminar cuenta</a>
+    </div>
+  </div>
+</footer>

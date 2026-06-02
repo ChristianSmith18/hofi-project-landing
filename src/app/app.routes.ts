@@ -1,11 +1,16 @@
 import { Routes } from '@angular/router';
-import { Home } from './pages/home/home';
-import { Privacy } from './pages/privacy/privacy';
-import { Terms } from './pages/terms/terms';
 
 export const routes: Routes = [
-  { path: '', component: Home },
-  { path: 'privacy', component: Privacy },
-  { path: 'terms', component: Terms },
+  { path: '', loadComponent: () => import('./pages/home/home').then((m) => m.Home) },
+  {
+    path: 'privacy',
+    loadComponent: () => import('./pages/privacy/privacy').then((m) => m.Privacy),
+  },
+  { path: 'terms', loadComponent: () => import('./pages/terms/terms').then((m) => m.Terms) },
+  {
+    path: 'delete-account',
+    loadComponent: () =>
+      import('./pages/account-deletion/account-deletion').then((m) => m.AccountDeletion),
+  },
   { path: '**', redirectTo: '' },
 ];
