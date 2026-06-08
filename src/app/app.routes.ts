@@ -12,5 +12,6 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/account-deletion/account-deletion').then((m) => m.AccountDeletion),
   },
+  { path: 'join/:token', loadComponent: () => import('./pages/join/join').then((m) => m.Join) },
   { path: '**', redirectTo: '' },
 ];

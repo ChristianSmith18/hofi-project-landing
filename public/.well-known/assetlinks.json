@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.cristiangonzalez.hofi",
+      "sha256_cert_fingerprints": [
+        "5A:AF:55:D6:24:DB:76:36:35:21:9F:AA:8C:84:6A:C6:75:1F:25:81:70:50:3C:D9:85:AF:A7:06:E8:92:17:00"
+      ]
+    }
+  }
+]
