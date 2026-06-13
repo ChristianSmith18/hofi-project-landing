@@ -1,11 +1,15 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "io.cristiangonzalez.hofi",
       "sha256_cert_fingerprints": [
-        "5A:AF:55:D6:24:DB:76:36:35:21:9F:AA:8C:84:6A:C6:75:1F:25:81:70:50:3C:D9:85:AF:A7:06:E8:92:17:00"
+        "5A:AF:55:D6:24:DB:76:36:35:21:9F:AA:8C:84:6A:C6:75:1F:25:81:70:50:3C:D9:85:AF:A7:06:E8:92:17:00",
+        "92:40:49:09:ED:14:78:CC:C1:14:6D:B3:A9:3D:78:8F:E3:9B:30:A1:61:82:2C:08:79:4E:CF:B5:47:D8:45:80"
       ]
     }
   }
